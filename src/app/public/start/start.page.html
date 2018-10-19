@@ -1,0 +1,24 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/assets/img/logo.png"></Image>
+		<Label class="header" text="APP NAME"></Label>
+
+		<GridLayout rows="auto, auto, auto">
+			<StackLayout row="0" class="input-field">
+				<TextField class="input" hint="Email" [isEnabled]="!processing" keyboardType="email" autocorrect="false"
+				 autocapitalizationType="none" [(ngModel)]="user.email" returnKeyType="next" (returnPress)="focusPassword()"></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<StackLayout row="1" class="input-field">
+				<TextField #password class="input" [isEnabled]="!processing" hint="Contraseña" secure="true" [(ngModel)]="user.password"
+				 returnKeyType="done"></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<ActivityIndicator rowSpan="3" [busy]="processing"></ActivityIndicator>
+		</GridLayout>
+		
+		<Button text="Ingresar" [isEnabled]="!processing" (tap)="login()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+</FlexboxLayout>
