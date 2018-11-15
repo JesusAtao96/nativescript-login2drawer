@@ -11,11 +11,11 @@ import {Page} from "ui/page";
 
 @Component({
     moduleId: module.id,
-    selector: "ns-menu",
-    templateUrl: "menu.component.html",
-    styleUrls: ['menu.component.scss']
+    selector: "ns-sidebar",
+    templateUrl: "sidebar.component.html",
+    styleUrls: ['sidebar.component.scss']
 })
-export class MenuComponent implements OnInit, AfterViewInit {
+export class SidebarComponent implements OnInit, AfterViewInit {
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private _activatedUrl: string;
@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        console.log("MenuComponent ngAfterViewInit - this.drawerComponent.sideDrawer=");
+        console.log("SidebarComponent ngAfterViewInit");
         this.drawerService.drawer = this.drawerComponent.sideDrawer;
     }
 

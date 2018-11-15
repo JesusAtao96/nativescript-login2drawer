@@ -2,12 +2,12 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { MenuComponent } from "./menu.component";
+import { SidebarComponent } from "./sidebar.component";
 
 const routes: Routes = [
     {
         path: '',
-        component: MenuComponent,
+        component: SidebarComponent,
         children: [
             { path: "", redirectTo: "/home", pathMatch: "full" },
             { path: "home", loadChildren: "~/app/pages/home/home.module#HomeModule" },
@@ -23,4 +23,4 @@ const routes: Routes = [
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class MenuRoutingModule { }
+export class SidebarRoutingModule { }

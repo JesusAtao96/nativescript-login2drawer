@@ -5,7 +5,7 @@
       "version": "4.2.0"
     },
     "tns-android": {
-      "version": "5.0.0-rc-2018-10-18-172901-01"
+      "version": "5.0.0"
     }
   },
   "description": "NativeScript Application",

@@ -1,22 +1,22 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
-import { MenuRoutingModule } from "./menu-routing.module";
-import { MenuComponent } from "./menu.component";
+import { SidebarRoutingModule } from "./sidebar-routing.module";
+import { SidebarComponent } from "./sidebar.component";
 
 @NgModule({
     bootstrap: [
-        MenuComponent
+        SidebarComponent
     ],
     imports: [
-        MenuRoutingModule,
+        SidebarRoutingModule,
         NativeScriptUISideDrawerModule
     ],
     declarations: [
-        MenuComponent
+        SidebarComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class MenuModule { }
+export class SidebarModule { }

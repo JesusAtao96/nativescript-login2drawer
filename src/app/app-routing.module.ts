@@ -5,7 +5,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 const routes: Routes = [
     { path: "", redirectTo: "/start", pathMatch: "full" },
     { path: 'start', loadChildren: '~/app/public/start/start.module#StartPageModule' },
-    { path: 'main', loadChildren: '~/app/pages/menu/menu.module#MenuModule' }
+    { path: 'main', loadChildren: '~/app/pages/sidebar.module#SidebarModule' }
 ];
 
 @NgModule({

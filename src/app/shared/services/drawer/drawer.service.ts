@@ -6,16 +6,12 @@ export class DrawerService {
 
     public drawer: SideDrawerType;
 
-    public toggle(force?: boolean) {
-        console.log("DrawerService.toggle");
+    public toggle() {
         if (this.drawer) {
-            if (typeof force !== 'undefined') {
-                if (force === false) {
-                    this.drawer.closeDrawer();
-                }
-            } else {
-                console.log(`DrawerService.toggle called with drawer:`, this.drawer);
+            if(!this.drawer.getIsOpen()) {
                 this.drawer.toggleDrawerState();
+            } else {
+                this.drawer.closeDrawer();
             }
         } else {
             console.log("DrawerService.toggle: this.drawer was undefined");
